@@ -7,10 +7,10 @@ RUN apk add --no-cache uwsgi && \
     rm -r /usr/lib/python*/ensurepip && \
     pip install --upgrade pip setuptools && \
     pip install bottle && \
-    rm -r /root/.cache && \
-    echo "daemon off;" >> /etc/nginx/nginx.conf
+    rm -r /root/.cache
 
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY nginx.conf /etc/nginx/nginx.conf
+COPY site.conf /etc/nginx/conf.d/default.conf
 COPY supervisord.conf uwsgi.ini /etc/
 COPY ./app /app
 WORKDIR /app
