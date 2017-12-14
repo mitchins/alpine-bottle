@@ -1,4 +1,4 @@
-FROM nginx:alpine
+FROM wernight/alpine-nginx-pagespeed
 
 RUN apk add --no-cache uwsgi && \
     apk add --no-cache uwsgi-python && \
