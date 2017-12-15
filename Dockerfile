@@ -9,8 +9,7 @@ RUN apk add --no-cache uwsgi && \
     pip install bottle && \
     rm -r /root/.cache && \
     addgroup -g 82 -S www-data && \
-    adduser -u 82 -D -S -G www-data www-data && \
-    chown -R www-data:www-data /app
+    adduser -u 82 -D -S -G www-data www-data
 
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY site.conf /etc/nginx/conf.d/default.conf
