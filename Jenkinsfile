@@ -11,7 +11,7 @@ node {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        app = docker.build("mitchins/alpine-bottle")
+        app = docker.build("mitchins/alpine-bottle:${BRANCH_NAME}")
     }
 
     stage('Test image') {
