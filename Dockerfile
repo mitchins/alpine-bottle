@@ -1,4 +1,4 @@
-from nginx:alpine
+FROM nginx:alpine
 
 RUN apk add --no-cache uwsgi && \
     apk add --no-cache uwsgi-python3 && \
