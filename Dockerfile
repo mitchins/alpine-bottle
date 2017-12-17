@@ -1,12 +1,12 @@
-FROM wernight/alpine-nginx-pagespeed
+from nginx:alpine
 
 RUN apk add --no-cache uwsgi && \
-    apk add --no-cache uwsgi-python && \
+    apk add --no-cache uwsgi-python3 && \
     apk add --no-cache supervisor && \
-    python -m ensurepip && \
-    rm -r /usr/lib/python*/ensurepip && \
-    pip install --upgrade pip setuptools && \
-    pip install bottle && \
+    python3 -m ensurepip && \
+    rm -r /usr/lib/python3*/ensurepip && \
+    pip3 install --upgrade pip setuptools && \
+    pip3 install bottle && \
     rm -r /root/.cache && \
     addgroup -g 82 -S www-data && \
     adduser -u 82 -D -S -G www-data www-data
