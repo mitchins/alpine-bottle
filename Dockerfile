@@ -28,7 +28,6 @@ RUN set -x && \
         gperf \
         libressl-dev \
         pcre-dev \
-        python \
         zlib-dev && \
     # Build libpng:
     # This sadly requires an old version of http://www.libpng.org/pub/png/libpng.html
