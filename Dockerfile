@@ -26,7 +26,7 @@ RUN set -x && \
         libjpeg-turbo-dev \
         linux-headers \
         gperf \
-        openssl-dev \
+        libressl-dev \
         pcre-dev \
         python \
         zlib-dev && \
